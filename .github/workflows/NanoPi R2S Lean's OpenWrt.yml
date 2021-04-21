@@ -2,11 +2,11 @@ name: NanoPi R2S Lean's OpenWrt
 on:
   repository_dispatch:
   workflow_dispatch:
-    inputs:
-      device:
-        description: 'select device to build'
-        default: 'r2s'
-        required: false
+   # inputs:
+     # device:
+    #    description: 'select device to build'
+    #    default: 'r2s'
+     #   required: false
   # watch:
   #   types: started
 
@@ -24,7 +24,7 @@ env:
 
 jobs:
   Build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: github.repository == 'DHDAXCW/NanoPi-R2S-2021'
     outputs:
       OPENWRTROOT: ${{ steps.update.outputs.OPENWRTROOT }}
