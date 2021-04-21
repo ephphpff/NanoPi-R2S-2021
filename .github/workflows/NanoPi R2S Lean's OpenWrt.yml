@@ -2,8 +2,11 @@ name: NanoPi R2S Lean's OpenWrt
 on:
   repository_dispatch:
   workflow_dispatch:
-  schedule:
-    - cron: 0 16 * * *
+    inputs:
+      device:
+        description: 'select device to build'
+        default: 'r2s'
+        required: false
   # watch:
   #   types: started
 
