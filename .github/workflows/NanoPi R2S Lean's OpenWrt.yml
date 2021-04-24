@@ -171,7 +171,7 @@ jobs:
   Upload:
     needs: [Build]
     runs-on: ubuntu-18.04
-    if: github.repository == 'DHDAXCW/NanoPi-R2S-2021'
+    if: github.repository == 'ephphpff/NanoPi-R2S-2021'
     steps:
       - name: Checkout
         uses: actions/checkout@main
