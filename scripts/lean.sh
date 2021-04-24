@@ -24,7 +24,7 @@ git clone --depth=1 https://github.com/Lienol/openwrt-package
 #git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 
 # Add luci-proto-minieap
-git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
+#git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add luci-app-netdata
 #rm -rf ../lean/luci-app-netdata
@@ -42,13 +42,13 @@ git clone --depth=1 -b master https://github.com/vernesong/OpenClash
 #git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-adguardhome
-#svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
-#svn co https://github.com/Lienol/openwrt/trunk/package/diy/adguardhome
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome
+svn co https://github.com/Lienol/openwrt/trunk/package/diy/adguardhome
 
 # Add luci-app-diskman
-#git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
-#mkdir parted
-#cp luci-app-diskman/Parted.Makefile parted/Makefile
+git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman
+mkdir parted
+cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # Add luci-app-dockerman
 #rm -rf ../lean/luci-app-docker
@@ -80,7 +80,7 @@ svn co https://github.com/281677160/openwrt-package/trunk/cpulimit
 svn co https://github.com/281677160/openwrt-package/trunk/luci-app-cpulimit
 
 # Add luci-udptools
-git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
+#git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 
 # Add luci-app-wireguard
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-wireguard
@@ -105,9 +105,9 @@ git clone --depth=1 https://github.com/linkease/linkease-openwrt
 popd
 
 # Add Pandownload
-pushd package/lean
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/lean/pandownload-fake-server
-popd
+#pushd package/lean
+#svn co https://github.com/immortalwrt/immortalwrt/trunk/package/lean/pandownload-fake-server
+#popd
 
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
@@ -159,7 +159,7 @@ sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/
 
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
-echo -e " DHDAXCW's FusionWrt built on "$(date +%Y.%m.%d)"\n -----------------------------------------------------" >> package/base-files/files/etc/banner
+echo -e " ephphpff's FusionWrt built on "$(date +%Y.%m.%d)"\n -----------------------------------------------------" >> package/base-files/files/etc/banner
 
 # Add CUPInfo
 pushd package/lean/autocore/files/arm/sbin
